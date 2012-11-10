@@ -19,11 +19,7 @@ do ->
   afilter = generate_async_function (new_list,iterator,el) --> new_list.push(el) if iterator(el)
 
     
-  jQuery.fn.unsynchronous = 
-    delay:delay
-    amap:amap
-    afilter:afilter
-    aeach:aeach
+  jQuery.fn.unsynchronous = {delay, amap, afilter, aeach}
     
   generate_plugin = (plugin,iterator,callback) --> plugin(@,iterator,callback)
     
