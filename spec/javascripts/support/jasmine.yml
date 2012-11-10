@@ -11,6 +11,7 @@
 #   - dist/**/*.js
 #
 src_files:
+    - components/jquery/jquery.js
     - lib/jquery.unsynchronous.js
 
 # stylesheets
