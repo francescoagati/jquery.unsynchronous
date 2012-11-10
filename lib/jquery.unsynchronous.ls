@@ -1,24 +1,24 @@
 do ->
     
-  delay= (fn,...args,callback) -> 
+  delay = (fn,...args,callback) -> 
     wrapper = -> callback(fn.apply(null,args))
     setTimeout wrapper
 
-  aeach=  (list,iterator,callback) -> 
+  aeach =  (list,iterator,callback) -> 
     for el in list
       delay iterator,el,cont()
     callback!
 
 
-  amap= (list,iterator,callback) -> 
-    new_list=[]
+  amap = (list,iterator,callback) -> 
+    new_list = []
     for el in list
       delay iterator,el,cont(result)
       new_list.push(result)
     callback(new_list)
 
   afilter= (list,iterator,callback) -> 
-    new_list=[]
+    new_list = []
     for el in list
       delay iterator,el,cont(result)
       new_list.push(el) if result
@@ -30,14 +30,10 @@ do ->
     afilter:afilter
     aeach:aeach
     
-  jQuery.fn.amap= (iterator,callback)->
-    elements=@
-    amap(elements,iterator,callback)
+  generate_plugin = (plugin,iterator,callback) --> plugin(@,iterator,callback)
     
-  jQuery.fn.afilter= (iterator,callback)->
-    elements=@
-    afilter(elements,iterator,callback)
-  
-  jQuery.fn.aeach= (iterator,callback)->
-    elements=@
-    aeach(elements,iterator,callback)
+  jQuery
+    ..fn
+      ..amap = generate_plugin amap
+      ..afilter= generate_plugin afilter
+      ..aeach= generate_plugin aeach
