@@ -23,4 +23,10 @@ do ->
     amap:amap
     afilter:afilter
     
-  
+  jQuery.fn.amap= (iterator,callback)->
+    elements=@
+    amap(elements,iterator,callback)
+    
+  jQuery.fn.afilter= (iterator,callback)->
+    elements=@
+    afilter(elements,iterator,callback)
