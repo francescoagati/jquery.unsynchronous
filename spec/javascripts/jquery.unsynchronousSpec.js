@@ -4,7 +4,23 @@
     it("exists", function(){
       return expect(jQuery.fn.unsynchronous).not.toBe(null);
     });
-    describe('map', function(x){
+    describe('aeach', function(x){
+      return it("creare a new array from [1 2 3 4 5]", function(){
+        var cb, new_list;
+        cb = jasmine.createSpy();
+        new_list = [];
+        jQuery.fn.unsynchronous.aeach([1, 2, 3, 4, 5], function(el){
+          return new_list.push(el);
+        }, cb);
+        waitsFor(function(){
+          return cb.callCount > 0;
+        });
+        return runs(function(){
+          return expect(new_list).toEqual([1, 2, 3, 4, 5]);
+        });
+      });
+    });
+    describe('amap', function(x){
       return it("transform [1 2 3 4 5] in [10 20 30 40 50] with (* 10)", function(){
         var cb;
         cb = jasmine.createSpy();
@@ -19,7 +35,7 @@
         });
       });
     });
-    return describe('filter', function(x){
+    return describe('afilter', function(x){
       return it("transform [1 2 3 4 5] in [4 5] with (>= 4)", function(){
         var cb;
         cb = jasmine.createSpy();
@@ -51,7 +67,7 @@
         });
       });
     });
-    return describe('afilter', function(x){
+    describe('afilter', function(x){
       return it("transform [1 2 3 4 5] in [4 5] with (>= 4)", function(){
         var cb;
         cb = jasmine.createSpy();
@@ -63,6 +79,22 @@
         });
         return runs(function(){
           return expect(cb.mostRecentCall.args[0]).toEqual([4, 5]);
+        });
+      });
+    });
+    return describe('aeach', function(x){
+      return it("creare a new array from [1 2 3 4 5]", function(){
+        var cb, new_list;
+        cb = jasmine.createSpy();
+        new_list = [];
+        $([1, 2, 3, 4, 5]).aeach(function(el){
+          return new_list.push(el);
+        }, cb);
+        waitsFor(function(){
+          return cb.callCount > 0;
+        });
+        return runs(function(){
+          return expect(new_list).toEqual([1, 2, 3, 4, 5]);
         });
       });
     });
