@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jquery.unsynchronous : jquery plugins for async versions of map, filter and each." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Jquery.unsynchronous</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/francescoagati/jquery.unsynchronous">View on GitHub</a>
+
+          <h1 id="project_title">Jquery.unsynchronous</h1>
+          <h2 id="project_tagline">jquery plugins for async versions of map, filter and each.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/francescoagati/jquery.unsynchronous/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/francescoagati/jquery.unsynchronous/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>jQuery unsynchronous</p>
+
+<p>jquery plugins for async versions of map, filter and each.</p>
+
+<p>amap</p>
+
+<p>jQuery(selector).amap(iterator,callback_result)</p>
+
+<pre><code> jQuery([1 2 3 4 5]).amap (
+    function(element) { return element + 10}, 
+    function(new_list) { console.log(new_list) }
+ );
+</code></pre>
+
+<p>afilter</p>
+
+<p>jQuery(selector).afilter(iterator,callback_result)</p>
+
+<pre><code> jQuery([1 2 3 4 5]).amap (
+    function(element) { return element &gt;= 4}, 
+    function(new_list) { console.log(new_list) }
+ );
+</code></pre>
+
+<p>aeach</p>
+
+<p>jQuery(selector).aeach(iterator,callback_result)</p>
+
+<pre><code> jQuery("div").amap (
+    function(element) { $(el).innerHtml = "hello" }, 
+    function() { console.log("done") }
+ );
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Jquery.unsynchronous maintained by <a href="https://github.com/francescoagati">francescoagati</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
