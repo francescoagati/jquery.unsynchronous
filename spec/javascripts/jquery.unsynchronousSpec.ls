@@ -30,7 +30,7 @@ describe "jQuery plugins", (x) ->
   describe \amap, (x) ->
       it "transform [1 2 3 4 5] in [10 20 30 40 50] with (* 10)", ->
         cb = jasmine.createSpy!
-        jQuery([1 2 3 4 5])amap (* 10), cb
+        jQuery([1 2 3 4 5]).amap (* 10), cb
         waitsFor -> cb.callCount > 0
         runs -> expect(cb.mostRecentCall.args[0]).toEqual([10 20 30 40 50])
 
