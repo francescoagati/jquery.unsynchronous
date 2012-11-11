@@ -7,7 +7,7 @@ Developed with [livescript](http://livescript.net/) and [continuation.js](https:
 
 
 see [jquery.unsynchronous.ls](https://github.com/francescoagati/jquery.unsynchronous/blob/master/lib/jquery.unsynchronous.ls) for original code
-and [jquery.unsynchronous.ls](https://github.com/francescoagati/jquery.unsynchronous/blob/master/lib/jquery.unsynchronous.js) for compiled code.
+and [jquery.unsynchronous.js](https://github.com/francescoagati/jquery.unsynchronous/blob/master/lib/jquery.unsynchronous.js) for compiled code.
 
 
 amap
