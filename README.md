@@ -1,7 +1,11 @@
 jQuery unsynchronous
 
 Jquery plugins for async versions of map, filter and each. 
+
+
 Developed with [livescript](http://livescript.net/) and [continuation.js](https://github.com/BYVoid/continuation).
+
+
 see [jquery.unsynchronous.ls](https://github.com/francescoagati/jquery.unsynchronous/blob/master/lib/jquery.unsynchronous.ls) for original code
 and [jquery.unsynchronous.ls](https://github.com/francescoagati/jquery.unsynchronous/blob/master/lib/jquery.unsynchronous.js) for compiled code.
 
