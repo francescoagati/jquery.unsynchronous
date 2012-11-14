@@ -37,8 +37,8 @@ aeach
 jQuery(selector).aeach(iterator,callback_result)
 
 ```
- jQuery("div").amap (
-    function(element) { $(el).innerHtml = "hello" }, 
+ jQuery("div").aeach (
+    function(element) { $(element ).innerHtml = "hello" }, 
     function() { console.log("done") }
  );
 ```
